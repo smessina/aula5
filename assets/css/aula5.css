@@ -1,0 +1,883 @@
+/*
+ * Author: Silvio Messina
+ * URL: http://silviomessina.com
+ *
+ * Project Name: Aula5
+ * Version: 1.0
+ * Date: xx-08-2014
+ * URL: http://aula5.com
+ */
+ /* @font-face */
+ @font-face {
+    font-family: 'CallunaRegular';
+    src: url('../fonts/calluna-regular-webfont.eot');
+    src: url('../fonts/calluna-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/calluna-regular-webfont.woff') format('woff'),
+         url('../fonts/calluna-regular-webfont.ttf') format('truetype'),
+         url('../fonts/calluna-regular-webfont.svg#CallunaRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'LeagueGothicRegular';
+    src: url('../fonts/league-gothic-webfont.eot');
+    src: url('../fonts/league-gothic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/league-gothic-webfont.woff') format('woff'),
+         url('../fonts/league-gothic-webfont.ttf') format('truetype'),
+         url('../fonts/league-gothic-webfont.svg#LeagueGothicRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'MuseoSans500';
+    src: url('../fonts/museosans_500-webfont-webfont.eot');
+    src: url('../fonts/museosans_500-webfont-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/museosans_500-webfont-webfont.woff') format('woff'),
+         url('../fonts/museosans_500-webfont-webfont.ttf') format('truetype'),
+         url('../fonts/museosans_500-webfont-webfont.svg#museo_sans500') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'MuseoSlab100';
+    src: url('../fonts/museo_slab_100-webfont-webfont.eot');
+    src: url('../fonts/museo_slab_100-webfont-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/museo_slab_100-webfont-webfont.woff') format('woff'),
+         url('../fonts/museo_slab_100-webfont-webfont.ttf') format('truetype'),
+         url('../fonts/museo_slab_100-webfont-webfont.svg#museo_slab_100') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+::-moz-selection {
+    background: #F46428 !important;
+    color: #FFF !important;
+    text-shadow: none !important;
+}
+
+::selection {
+    background: #F46428 !important;
+    color: #FFF !important;
+    text-shadow: none !important;
+}
+body {
+	font-family: 'MuseoSlab100', 'MuseoSans500', 'CallunaRegular', 'LeagueGothicRegular' !important;
+    display: list-item;
+    margin-top: 20px !important;
+    height: auto !important;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'MuseoSans500' !important;
+}
+a {
+    color: #0092bf !important;
+}
+a:hover {
+    color: #f14a26 !important;
+    cursor: pointer;
+}
+
+/* Menu */
+ .navbar-inverse { background: #0092bf; border: none; }
+ .navbar-inverse .container { margin: 0; }
+ .navbar-nav { margin-left: 15px; }
+ .navbar-nav a {
+	font-family: 'LeagueGothicRegular';
+	color: #FFF !important;
+	font-size: 25px;
+	text-transform: uppercase;
+    line-height: 100% !important;
+ }
+ .navbar-nav a:hover,
+ .navbar-nav > .active > a { background: #f14a26 !important; }
+
+.social-nav {
+    float: right;
+}
+.social-nav li {
+    padding: 15px 0;
+}
+
+.social-nav a {
+    font-family: 'icomoon' !important;
+    visibility: hidden;
+    font-size: 0;
+    padding: 0 !important;
+}
+
+.social-nav a:before {
+    visibility: visible;
+    font-size: 25px;
+    line-height: 100%;
+    padding: 15px;
+}
+.social-nav a:hover:before {
+    color: #f14a26 !important;
+}
+
+/* Intro */
+#intro {
+    background-attachment: fixed !important;
+    background-image: url("../img/fondos/header.jpg") !important;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 105%;
+    margin-top: -50px;
+    min-height: 650px;
+    overflow: hidden;
+    padding-top:120px;
+    text-align:center;
+    width: 100%;
+
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+#intro header {
+    position: relative;
+    z-index: 1;
+}
+#intro h1 {
+    background-image: url('../img/aula5.png');
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    color:#ffffff;
+    font-size: 100px;
+    font-weight: bold;
+    height: 200px;
+    letter-spacing: 8px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 90px;
+    padding-bottom: 30px;
+    text-indent: -9999px;
+    text-shadow: 2px 2px 2px #000;
+}
+#intro p {
+    font-family: 'LeagueGothicRegular';
+    text-transform: uppercase;
+    font-size: 50px !important;
+    color:#ffffff;
+    font-size: 40px;
+    font-weight: 400;
+    text-align: center;
+    line-height: 40px;
+    letter-spacing: 3px;
+    margin-left: 15px;
+    text-shadow: 0px 0px 5px #555;
+}
+#intro p:last-child { font-size: 35px !important; }
+
+
+#h1eaderwrap:before {
+    content: "";
+    width: 100%;
+    height: 101%;
+    display: block;
+    /*background: url("../img/fondos/header.jpg") no-repeat center top / 100% !important;*/
+    /*-webkit-filter: blur(2px);*/
+    /*background: red;*/
+    position: absolute;
+    top: 0;
+    z-index: 0;
+}
+#h1eaderwrap:after {
+    content: "";
+    width: 100%;
+    height: 10px;
+    display: block;
+    background: #fff;
+    position: absolute;
+    bottom: 0;
+}
+
+.greywrap {
+    background: #f5f5f5;
+    border-bottom: 1px solid #ddd;
+    border-top: 1px solid #ddd;
+    margin-top: 0px;
+    padding-top: 55px ;
+    text-align: center;
+}
+.greywrap .callout {
+    margin-bottom: 20px;
+}
+.greywrap p {
+    letter-spacing: 1px;
+    margin: 0 auto 0 !important;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    width: 75% !important;
+}
+.greywrap .icon {
+    font-size: 60px;
+    line-height: 30px;
+    margin-bottom: 10px;
+}
+.clear:before,
+.clear:after {
+    background: red;
+    content: "";
+    display: block;
+    clear: both;
+}
+h1.centered, h2.centered { text-transform: uppercase; }
+
+h1.icon:before,
+h2.icon:before,
+h3.icon:before,
+h4.icon:before,
+h5.icon:before,
+h6.icon:before {
+    font-family: 'icomoon' !important;
+    text-align: center;
+    font-size: 20px;
+}
+
+h1.icon:before,
+h2.icon:before,
+h3.icon:before,
+h4.icon:before,
+h5.icon:before,
+h6.icon:before {
+    display: block;
+    font-size: 175%;
+    margin-bottom: 12px;
+}
+.btn-flat {
+    border-radius: 0 !important;
+    background-color: #D85B35 !important;
+    font-family: 'LeagueGothicRegular';
+    text-transform: uppercase;
+    border: none;
+    font-size: 25px;
+}
+
+.call {
+    background: #e44d26 !important; /* Old browsers */
+
+    /*background: -moz-linear-gradient(top, #e44d26 50%, #f16529 50%) !important; /* FF3.6+ */
+    /*background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #e44d26), color-stop(50%, #f16529)) !important; /* Chrome,Safari4+ */
+    /*background: -webkit-linear-gradient(top, #e44d26 50%, #f16529 50%) !important; /* Chrome10+,Safari5.1+ */
+    /*background: -o-linear-gradient(top, #e44d26 50%, #f16529 50%) !important; /* Opera 11.10+ */
+    /*background: -ms-linear-gradient(top, #e44d26 50%, #f16529 50%) !important; /* IE10+ */
+    /*background: linear-gradient(to bottom, #e44d26 50%, #f16529 50%) !important; /* W3C */
+    /*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e44d26', endColorstr='#f16529', GradientType=0 ) !important; /* IE6-9 */
+
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;
+    border: solid 0 #e44d26;
+    border-radius: 0 !important;
+    color: #FFF !important;
+    padding: 8px  8px  6px  8px !important;
+    text-decoration: none;
+    text-align: center;
+    font-family: "LeagueGothicRegular";
+    text-transform: uppercase;
+    font-weight: normal !important;
+    font-size: 20px;
+    line-height: 100%;
+}
+.call:hover {
+    text-decoration: none;
+    background: #539FD3 !important; /* Old browsers */
+
+    /*background: -moz-linear-gradient(top, #0093bf 50%, #1bb7ea 50%) !important; /* FF3.6+ */
+    /*background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #0093bf), color-stop(50%, #1bb7ea)); /* Chrome,Safari4+ */
+    /*background: -webkit-linear-gradient(top, #0093bf 50%, #1bb7ea 50%) !important; /* Chrome10+,Safari5.1+ */
+    /*background: -o-linear-gradient(top, #0093bf 50%, #1bb7ea 50%) !important; /* Opera 11.10+ */
+    /*background: -ms-linear-gradient(top, #0093bf 50%, #1bb7ea 50%) !important; /* IE10+ */
+    /*background: linear-gradient(to bottom, #0093bf 50%, #1bb7ea 50%) !important; /* W3C */
+    /*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0093bf', endColorstr='#1bb7ea', GradientType=0 ) !important; /* IE6-9 */
+
+    border: solid 0 #539FD3;
+    color: #FFF !important;
+}
+#logo  {
+    width: 75px;
+    height: 1px;
+    /*background: red;*/
+    position: relative;
+}
+#logo a {
+    background-image: url('../img/aula5.png');
+    background-size: 100%;
+    width: 75px;
+    height: 105px;
+    display: block;
+    margin: 10px 0;
+    opacity: 1;
+    position: absolute;
+    top: -120px;
+    transition: top 1s ease;
+}
+#logo a.show { top: 0; }
+
+.btn-flat:hover {
+    background-color: #f14a26 !important;
+}
+.features {
+    text-align: center;
+}
+.features p {
+    padding-top: 0 !important;
+}
+.ideal5 {
+	text-align: center;
+}
+.objectives {
+    display: inline-block;
+    list-style: none outside none;
+    margin: 10px auto;
+    padding: 20px;
+    text-align: center;
+    width: 85%;
+    background: #f5f5f5;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+.objectives dt {
+	float: left;
+	width: 21%;
+	height: 145px;
+	border-right: solid 1px #ccc;
+	padding-right: 15px;
+	text-align: right;
+}
+.objectives dd {
+    float: left;
+    line-height: 125%;
+    margin-bottom: 10px;
+    padding-left: 15px;
+    position: relative;
+    text-align: left;
+    width: 75%;
+    font-style: italic;
+    font-weight: bold;
+    white-space: nowrap;
+}
+.objectives dd:before {
+	content: "-";
+	margin-right: 10px;
+}
+.objectives dd.icon-star3:before {
+	position: absolute;
+	left: 0;
+	display: none;
+}
+.navbar .container {
+	padding: 0 15px;
+}
+.container {
+	padding: 40px 15px 30px 15px;
+}
+#my-macbook {
+    background-image: url("../img/macbook.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    /*background-size: 92%;*/
+    position: relative;
+    width: 630px;
+    height: 375px;
+    z-index: 0;
+}
+#my-macbook:before {
+    background-image: url("../img/loading.gif");
+    background-position: center;
+    background-repeat: no-repeat;
+    content: "";
+    display: block;
+    height: 16px;
+    left: 50%;
+    margin-left: -8px;
+    margin-top: -8px;
+    position: absolute;
+    top: 50%;
+    width: 16px;
+    z-index: 10;
+    opacity: 1;
+}
+#my-macbook:after {
+    background-color: #c0c0c0;
+    content: "";
+    display: block;
+    height: 298px;
+    left: 76px;
+    position: absolute;
+    top: 21px;
+    width: 478px;
+}
+.btn-success.call {
+    padding: 10px !important;
+    font-weight: 100 !important;
+    -webkit-transition: color 0.1s ease-in, background 0.1s ease-in;
+    -moz-transition: color 0.1s ease-in, background 0.1s ease-in;
+    -ms-transition: color 0.1s ease-in, background 0.1s ease-in;
+    -o-transition: color 0.1s ease-in, background 0.1s ease-in;
+    transition: color 0.1s ease-in, background 0.1s ease-in;
+    font-size: 20px !important;
+}
+.more a {
+    margin: 10px;
+    font-size: 125%;
+}
+/* @animate */
+/* Slider + Animacion */
+#my-macbook.motion:before {
+    animation: loadingGIF 1s ease 2s;
+    animation-fill-mode: forwards;
+}
+#animate {
+    width: 400px;
+    height: 290px;
+    position: relative;
+    z-index: 0;
+    -background: url('../img/bg-grid.jpg');
+    margin: 0 auto;
+    top: 30px;
+    z-index: 1;
+    overflow: hidden;
+    padding: 0 10px;
+    box-sizing: content-box;
+}
+#animate dt {
+    background: url('../img/silvio_messina_avatar.png') no-repeat center bottom / 100%;
+    width: 165px;
+    height: 200px;
+    display: block;
+    position: absolute;
+    bottom: 0px;
+    margin: 0;
+    padding: 0;
+    left: 50%;
+    margin-left: -82.5px;
+    z-index: 100;
+    opacity: 0;
+    text-indent: -9999px;
+}
+.motion #animate dt {
+    animation: moverYO 2s ease 3s;
+    animation-fill-mode: forwards;
+}
+#animate dd {
+    display: block;
+    width: 50px;
+    height: 50px;
+    background: blue;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    z-index: 50;
+    opacity: 0;
+}
+#animate dd:before {
+  content: "";
+  display: block;
+  border-right-width: 10px;
+  border-right-color: transparent;
+  border-right-style: solid;
+  border-bottom-width: 10px;
+  border-bottom-style: solid;
+  width: 50px;
+  margin-top: -10px;
+}
+#animate dd:after {
+  content: "";
+  display: block;
+  width: 50px;
+  margin-top: -60px;
+  border-left-width: 10px;
+  border-left-style: solid;
+  border-top-width: 10px;
+  border-top-color: transparent;
+  border-top-style: solid;
+  margin-left: 39px;
+}
+.motion #animate dd a {
+  display: block;
+  width: 50px;
+  height: 50px;
+  background-image: url("../img/icons.png");
+  background-repeat: no-repeat;
+  text-indent: -9999px;
+}
+.motion #animate dd#net {
+    background: #603778;
+    animation: moverNET 2s ease 5s;
+    animation-fill-mode: forwards;
+}
+.motion #animate dd#net:before { border-bottom-color: #603778; }
+.motion #animate dd#net:after { border-left-color: #9A7FAB; }
+.motion #animate dd#net a { background-position: center -320px; }
+
+.motion #animate dd#mysql {
+    background: #2D7A7C;
+    animation: moverMYSQL 2s ease 5.5s;
+    animation-fill-mode: forwards;
+}
+.motion #animate dd#mysql:before { border-bottom-color: #2D7A7C; }
+.motion #animate dd#mysql:after { border-left-color: #70ACAE; }
+.motion #animate dd#mysql a { background-position: center -215px; }
+
+.motion #animate dd#php {
+    background: #969DC9;
+    animation: moverPHP 2s ease 6s;
+    animation-fill-mode: forwards;
+}
+.motion #animate dd#php:before { border-bottom-color: #969DC9; }
+.motion #animate dd#php:after { border-left-color: #BFC2DD; }
+.motion #animate dd#php a { background-position: center -163px; }
+
+.motion #animate dd#wordpress {
+    background: #464646;
+    animation: moverWP 2s ease 6.5s;
+    animation-fill-mode: forwards;
+}
+.motion #animate dd#wordpress:before { border-bottom-color: #464646; }
+.motion #animate dd#wordpress:after { border-left-color: #8C8C8C; }
+.motion #animate dd#wordpress a { background-position: center -265px; }
+
+.motion #animate dd#html5 {
+    background: #D85B35;
+    animation: moverHTML 2s ease 7s;
+    animation-fill-mode: forwards;
+}
+.motion #animate dd#html5:before { border-bottom-color: #D85B35; }
+.motion #animate dd#html5:after { border-left-color: #E5967E; }
+.motion #animate dd#html5 a { background-position: center -2px; }
+
+.motion #animate dd#css3 {
+    background: #489DD7;
+    animation: moverCSS 2s ease 7.5s;
+    animation-fill-mode: forwards;
+}
+.motion #animate dd#css3:before { border-bottom-color: #489DD7; }
+.motion #animate dd#css3:after { border-left-color: #8EC2E6; }
+.motion #animate dd#css3 a { background-position: center -55px; }
+
+.motion #animate dd#jquery {
+    background: #1D6CAA;
+    animation: moverJQUERY 2s ease 8s;
+    animation-fill-mode: forwards;
+}
+.motion #animate dd#jquery:before { border-bottom-color: #1D6CAA; }
+.motion #animate dd#jquery:after { border-left-color: #71A2CA; }
+.motion #animate dd#jquery a { background-position: center -109px; }
+
+
+/*******/
+#formacion {
+    margin: 10px 0;
+}
+#proyecto,
+#mentorias,
+#cursos,
+#tematicas {
+    padding: 40px 15px 0 15px !important;
+    position: relative;
+}
+
+#proyecto1:before {
+    content: "";
+    display: block;
+    background: red;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    height: 10px;
+}
+
+#inicio .row,
+#proyecto .row,
+#mentorias .row,
+#cursos .row,
+#tematicas .row {
+    margin: 30px 0 30px -15px !important;
+}
+
+#proyecto .row h2,
+#mentorias .row h2,
+#cursos .row h2,
+#tematicas .row h2 {
+    padding: 0 0 15px 0 !important;
+    position: relative;
+    margin: 10px 0 15px 0 !important;
+}
+#proyecto .row h2:after,
+#mentorias .row h2:after,
+#cursos .row h2:after,
+#tematicas .row h2:after {
+    background: #ccc;
+    content: "";
+    height: 2px;
+    left: 25%;
+    position: absolute;
+    bottom: 0;
+    width: 50%;
+}
+
+
+#tematicas .container:first-of-type { padding: 0 15px;  }
+#tematicas .container:first-of-type .row h2 { margin: 10px 0 45px 0 !important; }
+
+
+hr { display: none !important; }
+
+
+.tech {
+    position: relative;
+}
+.tech:after {
+    content: "";
+    width: 60px;
+    background-size: 100%;
+    height: 60px;
+    background-repeat: no-repeat;
+    background-position: center;
+    /*background-color: red;*/
+    display: block;
+    position: absolute;
+    right: 5%;
+    top: 50%;
+}
+.tech.html5-css3:after {
+    background-image: url("../img/tematicas/logos/html5-css3.png");
+}
+.tech.js:after {
+    background-image: url("../img/tematicas/logos/js.png");
+}
+.tech.php-mysql:after {
+    background-image: url("../img/tematicas/logos/php-mysql.png");
+}
+.tech.mobile:after {
+    background-image: url("../img/tematicas/logos/mobile-rd.png");
+}
+.tech.wp:after {
+    background-image: url("../img/tematicas/logos/wp.png");
+}
+.tech.net:after {
+    background-image: url("../img/tematicas/logos/net.png");
+}
+
+.tech a.call {
+    font-size: 18px;
+    line-height: 20px;
+    padding: 5px !important;
+    text-align: center;
+    width: 25%;
+}
+.section-divider h1 {
+    text-transform: uppercase;
+}
+
+.section-divider p {
+    width: 85%;
+    margin: 20px auto;
+}
+.friends {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+}
+.friends span,
+.friends a {
+    font-family: 'MuseoSlab100';
+    margin-left: 5px;
+    line-height: 150%;
+}
+
+.textdivider {
+    background-attachment: fixed !important;
+}
+.grid figcaption {
+    background: #0092bf !important;
+}
+/* ### Seccion: Inicio ### */
+
+#inicio h2 { font-size: 28px; }
+
+/* ### Seccion: Inicio ### */
+
+/* ### Seccion: Inicio ### */
+
+/* Section Dividers Backgrounds */
+.divider1,
+.divider2,
+.divider3,
+.divider4,
+.divider5,
+.divider6 { font-weight: bold; }
+
+.divider1 {
+    background-image: url('../img/fondos/a_medida.jpg') !important;
+    text-shadow: 0px 0px 5px #555;
+}
+
+.divider2 {
+    background-image: url('../img/fondos/acciones_correctas.jpg') !important;
+    text-shadow: 0px 0px 5px #555;
+}
+
+.divider3 {
+    background-image: url('../img/fondos/saber_crecer.jpg') !important;
+    text-shadow: 0px 0px 5px #555;
+    margin-top: 0px;
+}
+
+.divider4 {
+    background-image: url('../img/bg/divider4.jpg')
+}
+
+.divider6 {
+    background-image: url('../img/fondos/desde_bs_as.jpg') !important;
+    text-shadow: 0px 0px 5px #555;
+}
+#newsletter_form,
+#mc-embedded-subscribe-form {
+    border-top: solid 2px #FFF;
+}
+#contact_form select,
+#contact_form option {
+    color: #999 !important;
+}
+
+#footer {
+    background: #333;
+    margin-top: 0px;
+    padding-top: 40px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}
+#footer ul {
+    list-style: none;
+    margin: 0 auto 10px;
+    padding: 0;
+    width: 50%;
+}
+#footer ul li {
+    display: inline-block;
+}
+#footer ul li:nth-of-type(2):before,
+#footer ul li:nth-of-type(2):after {
+    content: "-";
+    display: inline-block;
+    padding: 0 5px;
+}
+
+.panel-body p:first-of-type { margin-bottom: 12px; }
+.panel-body p:last-of-type { margin: 0; }
+
+#contacto h3 { text-align: center; }
+
+.centrado { margin: 0 auto !important; }
+
+.btn-submit { width: 100%; }
+
+.qSubmit {
+    position: relative;
+}
+.status {
+    position: absolute;
+    top: 0;
+    display: block;
+    text-align: center;
+    background: #FFF;
+}
+.status.sending {
+    content: "";
+    background: url('../img/ajax-loader.gif') no-repeat center;
+    visibility: visible;
+    background-size: cover;
+    cursor: not-allowed;
+     width: 30px;
+    height: 30px;
+    left: 50%;
+    margin-left: -15px;
+}
+.status.sended, .status.error {
+    visibility: visible;
+    font-family: "MuseoSans500";
+    font-size: 13px;
+    width: 100%;
+    text-transform: uppercase;
+}
+.status.sended { color: #0092bf; }
+.status.error { color: #F46428; margin-top: 15px; position: static; }
+
+.status.sended:before,
+.status.error:before {
+    font-family: "LeagueGothicRegular";
+    display: block;
+    transform: rotate(90deg);
+    width: 20px;
+    margin: auto;
+    font-size: 20px;
+    letter-spacing: 2px;  
+}
+
+.status.sended:before { content: ":-)"; }
+.status.error:before { content: ":-("; }
+
+.form-control { color: #555 !important; }
+
+.close { color: #FFF !important; opacity: .5 !important; }
+
+a.evento {
+    background: #f14a26;
+    padding: 20px 20px 20px 100px;
+    display: block;
+    width: 40%;
+    margin: auto;
+    color: #FFF !important;
+    font-family: "LeagueGothicRegular";
+    text-align: left;
+    font-size: 30px;
+    line-height: 100%;
+    position: relative;
+}
+a.evento:before {
+    position: absolute;
+    left: 20px;
+    font-size: 50px;
+    top: 50%;
+    margin-top: -25px;
+    font-family: "icomoon";
+    line-height: 100%;
+}
+a.evento:hover { background: #0092bf; }
+a.evento * {
+    display: block;
+}
+a.evento span { font-size: 35px; }
+a.evento small { font-size: 22px; }
+a.evento i.icon-play {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    font-size: 40px;
+    margin-top: -20px;
+}
+
+::-webkit-input-placeholder { /* WebKit browsers */
+    color:    #555 !important;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:    #555 !important;
+   opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:    #555 !important;
+   opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+   color:    #555 !important;
+}

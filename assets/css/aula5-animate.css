@@ -1,0 +1,47 @@
+/* Aula5 - Animates */
+
+
+
+/* KeyFrames */
+@keyframes loadingGIF {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+@keyframes moverYO {
+    from {
+        transform: translateY(150px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes moverWP {
+    from { transform: translate(175px, 150px) rotate(0deg); opacity: 0; }
+    to { transform: translate(175px, 10px) rotate(1080deg); opacity: 1; }
+}
+@keyframes moverHTML {
+    from { transform: translate(175px, 150px) rotate(0deg); opacity: 0; }
+    to { transform: translate(300px, 60px) rotate(1080deg); opacity: 1; }
+}
+@keyframes moverPHP {
+    from { transform: translate(175px, 150px) rotate(0deg); opacity: 0; }
+    to { transform: translate(50px, 60px) rotate(1080deg); opacity: 1; }
+}
+@keyframes moverCSS {
+    from { transform: translate(175px, 150px) rotate(0deg); opacity: 0; }
+    to { transform: translate(325px, 145px) rotate(1080deg); opacity: 1; }
+}
+@keyframes moverMYSQL {
+    from { transform: translate(175px, 150px) rotate(0deg); opacity: 0; }
+    to { transform: translate(25px, 145px) rotate(1080deg); opacity: 1; }
+}
+@keyframes moverJQUERY {
+    from { transform: translate(175px, 150px) rotate(0deg); opacity: 0; }
+    to { transform: translate(350px, 230px) rotate(1080deg); opacity: 1; }
+}
+@keyframes moverNET {
+    from { transform: translate(175px, 150px) rotate(0deg); opacity: 0; }
+    to { transform: translate(0px, 230px) rotate(1080deg); opacity: 1; }
+}

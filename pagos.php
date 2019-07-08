@@ -1,0 +1,1 @@
+<img src="../assets/img/pagos.png" alt="" style="display:block;margin:auto">
